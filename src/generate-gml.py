@@ -23,6 +23,7 @@ for i in range(len(channels)):
             gml.append("[")
             gml.append(f"source {channels[i][0]}")
             gml.append(f"target {channels[j][0]}")
+            gml.append(f"weight {len(set(channels[i][1]) & set(channels[j][1]))}")
             gml.append("]")
         j+=1
 

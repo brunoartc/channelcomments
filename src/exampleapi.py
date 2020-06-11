@@ -30,7 +30,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 api_service_name = "youtube"
 api_version = "v3"
-DEVELOPER_KEY = "AIzaSyCjHJhGRa1FOnAgvTC1Rmnd8C7Zbzeswis"
+DEVELOPER_KEY = "AIzaSyAauHYQ-rEzrHlcLojAl8-pQHdiDjVrVQg"
 
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey = DEVELOPER_KEY)
@@ -234,7 +234,7 @@ def getAllComentsPerChannel(id = "UC6IYj9pQ5sv6zqZrISZNRzQ"):
 #print(getAllComentsPerChannel()) # 3 unidades - 50 comentarios (10.000) = 166650 comentarios por rodada
 
 if __name__ == "__main__":
-    f = open('siensiabanana.txt', "r")
+    f = open('chugulo', "r")
     lines = f.readlines()
     f.close()
 

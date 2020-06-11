@@ -30,7 +30,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 api_service_name = "youtube"
 api_version = "v3"
-DEVELOPER_KEY = "AIzaSyCjHJhGRa1FOnAgvTC1Rmnd8C7Zbzeswis"
+DEVELOPER_KEY = "AIzaSyAauHYQ-rEzrHlcLojAl8-pQHdiDjVrVQg"
 
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey = DEVELOPER_KEY)
@@ -233,11 +233,31 @@ def getAllComentsPerChannel(id = "UC6IYj9pQ5sv6zqZrISZNRzQ"):
 #print(getAllComentsPerChannel()) # 3 unidades - 50 comentarios (10.000) = 166650 comentarios por rodada
 
 if __name__ == "__main__":
-    f = open('playlist2', "r")
-    lines = f.readlines()
-    f.close()
+#    f = open('playlist2', "r")
+#    lines = f.readlines()
+#    f.close()
 
-    full_commennts = set()
+#    full_commennts = set()
 
-    for i in ["DSid3SudPoA", "az3oo4wHnXY", "w_qiJSHUGnc", "n56U6FMK6Xg", "SfZHGtTGRn0", "6uyclhNWN5E", "LMytn90uAS8", "OFf66RbtiXs", "t5-pHGyTFjI", "9NcTW3jdm1M", "WCQTxnNuKe0", "guMUksv4fO8", "t2NF4YIOp18", "2kH94N4CdBs", "C1k1qpRlnxU", "XJy-5aLjhZY", "K8VQ9dFHJb4", "xgapWF1fpfs", "01eO9INWmS4", "njrLdKL3kbs", "oUyEw3h-TN0", "CAPX0AMbxZE", "w8fvgujrKi4", "aXNwdOWIc8s", "V_UNSRN9IdQ", "a77pe3ZstCM", "qjHPy8n8JOY", "aghOyBpo9Kg", "QliKBmWieAY", "MJUb13KLEx4", "AVFA78j7yag", "GkEpYhlFer4", "JdV-ZsKAdjs", "VD-K63YxHbQ", "qbzvw_dzbjs", "1mQeALggCXs", "gHzP7U_cXi4", "9dCBsqpsVOI", "l9QDhLKsXt0", "FyiK_ZmxkZk", "FjVKDFHFDns", "OfxpkQ379ms", "tVAbPcHIG6o", "txiXprSGlYw", "-6NQ6Fut8Qw", "Eml4Cw4VQ1w", "6JQPQIdAGqs", "1jFQ_1eflTI", "qRTVCBeyplI", "tT6K-Gz1Uhs", "P33kiIHcu44", "Zfvr4piQdms", "6f2en1O-IvM", "8jgFb3e6NGc", "QHYqsukgpXU", "A3_zHm3-2-k", "PuYonApyhGA", "DmDyhIlNy2Y", "5v_mjxYhrJI", "QQg8DqHI-H4", "AZ5KdxjrPow", "74sDoUdqJps", "2ler9MzN5KY", "1AHX8kxfLkQ", "Xh-jeMj3Kjs", "3W18DQCDxwc", "tueTPWPLPNs", "YEr4A0zeaWQ", "cegGDh90Ltw", "io1ll_OgxRw", "B96XZr2s7u4", "T3RoaLpeg3g", "nFHr4jOdVxY", "yDe8e_QVRQU", "KOqCnvz9HPk", "O1anDJJnslc", "LDyKvnhOgWU", "Ps3xIhhJz8U", "kEG-42dk8X0", "uYTYqG1Z0SQ", "qq2oLyHMqVM", "lJOgp6hRaAg", "-BqYSIBkE2Y", "W9H3AmfTons", "2mLAFBWtC4o", "PJrOiU6VlfU", "i3mg6sUpEII", "kbsaPanbSuA", "NQDCSAtIdhQ", "t2foHEwSSRg", "5iWCQVXc7ao", "LkSgmfRiYn8", "F_N12cimQuc", "Rn-2tMOXQX8", "wMRa27hnbHc", "gZQoll091dk", "BnSjP3F_0Zo", "4G9bXKWjblg", "y1koV9TkjPs", "wdHbEA-nxRc", "CfB8LND752A", "b2s1itdXnGY", "gezU_zLYDw0", "M96e02ZG1QM", "_ConUtxHwMY", "MvICaNbEaW8", "5MabRx71j4g", "SpZVugvanCg", "zyfxuvzcBPE", "N6EujK5-tV0", "0cyU_vBaXL8", "c51fXrfHaXM", "fHjUtGPENM8", "O3A5rpDJGPg", "3vTFS7LQOC8", "myCiSfdiK-A", "PJdGDFpQILo", "mhtr5WkjRGs", "NzyAcjY_NFE", "BoRi_pgFrl0", "v-ZfOCMBEuI", "B8TH4nl0U6s", "yXqhhm3Z6vI", "lqL-m8gawAc", "2q7sWktM8kw", "BLxiuJVAFyY", "khOxP-HwdgM", "xWOVEf87WGw", "dQjhL7w7EyI", "tnR-U6fiCwo", "bMpu8emmSa0", "6_I51AIjkhg", "ARrHMgUEu44", "XRnL8qTMYHc", "SLnT4TlOJis", "CBtIYcP6ijk", "V0PpS0INbyI", "h2bviMr5M_o", "K_LbKneIk6k", "opxCee2uwL0", "uilxJH6J3aM", "1GXjj0bCNXY", "7kxudgCfg6g", "b26wW8uko8U", "4NetayLahTs", "6HtdmMdJjc4", "8fZuN-r5FVU", "6nyor9Gx8ig", "rWgnmKPZ-nA", "jNfFffnAGHU", "4_WeDyLh_ag", "g1MUsT9UjrY", "Iv-5jYmu60o", "DbNWpKGqavo", "ZDjt4gT_-jA", "XWVM6T4vG7Q", "0AAwca-miu0", "p-wlzt--Gv8", "dsgtlsy2UvE", "8cFXX-YaESc", "CLxr9YWJRBc", "NrxONRkX9oY", "pfQ8EH735ro", "Wlh9yG2MKFc", "oCgRSHGIXmo", "5GZiJV8ABHs", "DoNytxLWrKs", "Ez9BvOt2whA", "D-l-FHwfmmI", "Eyk6glmCTE4", "1t09iLF7BYQ", "93HWw15yzEA", "Ay0fEdbNM5o", "oishdvTKtoo", "1dHVQytQF3E", "O_zkowOXemY", "H9anqyrK7NA", "wvSh-mOGQhY", "8FzDYtpWzfg", "7MJ3HBzDxWE", "UsQFtX4rtbc", "XA7HDr1Nw78", "ijDAyFTorlQ", "hmSIz4DQv10", "haxoVEN7T9g", "FEsgm5IurP8", "3Kjl7oo7zC8", "auV5b0cWV9I", "mNK22Vwhri8", "n-vtzBaBL44", "hAk_tkjHjt4", "Qa1kmGYcL6U", "M02xhdIRHCE", "5ZBVDbE4s5g", "-eYLjOGgP4c", "Ntzz4WMJoN8", "4Mkg5SbO1kw", "ISL6-ruD-jo", "ypgtobb08E0", "HekKqOZCxNo", "fHDNQTBkeRA", "PO-0Wdh7p1o", "GaMP2BmOXp0", "Ui6TYItprvY", "aIIqoXp52V0", "9X_sBOTyhjw", "hJNiHdv29Yg", "w8NtDGFj1c8", "YLpiCMynqkA", "awL-XpFQoQ8", "vDbz4AjLh40", "kl0sqA_c9RY", "f_ZFGIaAQRo", "9B3wH4YNQ4w", "VkQaWGaLTwM", "WDKLJlM3StQ"]:
-        set.add(get_comments(i))
+#    for i in [
+#"7YwG8pnfSa8",
+#"we0D78_skIA",
+#"u2zUap1s2BE",
+#"X8KGoLBsKok",
+#"6rgSdb90Ykg",
+#"GPIfYwgjowI",
+#"JD0jHSeGEps",
+#"SycYVU1Ikp4",
+#"aW-qbx04gS4",
+#"brQf3avYAEo",
+#"DB8yS16aVAs",
+#"EDhMWvVHZ5Y",
+#"TsGnRdj8vzI"]:
+# TsGnRdj8vzI
+     with open(f"M-TsGnRdj8vzI", "w") as ff:
+          json.dump(list(get_comments("TsGnRdj8vzI")), ff)
+        
+        
+        
+        
+        
