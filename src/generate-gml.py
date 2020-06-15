@@ -7,7 +7,7 @@ channels = []
 gml = ["graph", "["]
 
 for i in files:
-    print(type(i))
+    #print(type(i))
     gml.append("node")
     gml.append("[")
     gml.append(f"id {i}")
