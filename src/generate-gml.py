@@ -11,6 +11,8 @@ for i in files:
     gml.append("node")
     gml.append("[")
     gml.append(f"id {i}")
+    tipo = i.split("-")[0].split("\\")[1]
+    gml.append(f"tipo {tipo}")
     gml.append("]")
     with open(i) as a:
         channels.append([i, json.load(a)])
