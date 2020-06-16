@@ -4,8 +4,12 @@ files = glob.glob("./output/clean/*")
 channels = [] 
 
 
-gml = ["graph", "["]
+gml = ["graph", "[", "directed 0"]
 
+stats = {"P":[], "C":[], "M":[]}
+
+
+statsDo = {"P":[], "C":[], "M":[]}
 for i in files:
     #print(type(i))
     gml.append("node")
@@ -19,6 +23,7 @@ for i in files:
 
 for i in range(len(channels)):
     j = i + 1
+    tipo = channels[i][0].split("-")[0].split("\\")[1]
     while j < len(channels):
         if len(set(channels[i][1]) & set(channels[j][1])) > 0:
             gml.append("edge")
@@ -27,12 +32,24 @@ for i in range(len(channels)):
             gml.append(f"target {channels[j][0]}")
             gml.append(f"weight {len(set(channels[i][1]) & set(channels[j][1]))}")
             gml.append("]")
-        j+=1
+            
+            stats[tipo].append(len(set(channels[i][1]) & set(channels[j][1])))
 
+        j+=1
+    statsDo[tipo] += channels[i][1]
 
 gml.append("]")
 
 print("\n".join(gml))
+
+
+
+
+with open("stats1", "w") as filse:
+    json.dump(statsDo, filse)
+
+with open("stats2", "w") as filse:
+    json.dump(stats, filse)
 
 
 
