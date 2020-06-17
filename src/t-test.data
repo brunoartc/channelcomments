@@ -1,0 +1,3 @@
+Ttest_indResult(statistic=4.859476678772502, pvalue=1.1237694471544539e-05) P & M
+Ttest_indResult(statistic=7.058630171105152, pvalue=8.135086934920493e-11) C & M
+Ttest_indResult(statistic=3.307565253840196, pvalue=0.003475475898427002) P & C
